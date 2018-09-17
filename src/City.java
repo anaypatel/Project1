@@ -4,12 +4,14 @@ import java.util.Set;
 
 public class City {
 	
-	String name;
-	List<Flight> flights;
+	public String name;
+	public List<Flight> flights;
+	public boolean visited;
 	
 	public City(String n) {
 		this.name = n;
 		flights = new ArrayList<Flight>();
+		visited = false;
 	}
 	
 }

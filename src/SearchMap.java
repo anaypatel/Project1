@@ -69,9 +69,7 @@ public class SearchMap {
         }
         catch(IOException ex) {
             System.out.println("Error reading file " + infile);                  
-        }
-		
-		
+        }	
 		
 	}
 	
