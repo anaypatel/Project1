@@ -2,12 +2,12 @@ public class Flight {
 		
 	private String source;
 	private String dest;
-	private double weight;
+	private double cost;
 		
-	public Flight(String s, String d, double w) {
+	public Flight(String s, String d, double c) {
 		this.source = s;
 		this.dest = d;
-		this.weight = w;
+		this.cost = c;
 	}
 		
 }

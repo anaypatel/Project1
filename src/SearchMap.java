@@ -23,12 +23,20 @@ public class SearchMap {
             FileReader fr = new FileReader(infile);
             BufferedReader br = new BufferedReader(fr);
             
-            char origin = br.readLine().charAt(0);
+            String origin = br.readLine();
             
+            String source, dest;
+            double cost;
             
             while((line = br.readLine()) != null) {
                 System.out.println(line);
                                 
+                String[] splitted_line = line.split(" ");
+                
+                source = splitted_line[0];
+                dest = splitted_line[1];
+                cost = Double.parseDouble(splitted_line[2]);
+                
                 
                 
             }   
