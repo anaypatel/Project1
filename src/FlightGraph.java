@@ -8,12 +8,10 @@ public class FlightGraph {
 	
 	public Map<String, City> cityMap;
 	public String origin;
-	public String outfile;
 	public Map<String, String> paths;
 	
-	public FlightGraph(String o, String of) {
+	public FlightGraph(String o) {
 		this.origin = o;
-		this.outfile = of;
 		cityMap = new HashMap<String, City>();
 		paths = new HashMap<String, String>();
 		paths.put(origin, "origin");
@@ -31,16 +29,28 @@ public class FlightGraph {
 		
 		while(!path.isEmpty()) {
 			output += path.pop();
-			output += ", ";
+			output += ",";
 		}
 		
-		return output;
+		return output.substring(0, output.length() - 1);
 	}
 	
 	public String path_cost(String s) {
-		String output = "";
+		double cost = 0;
+		String curr = s;
 		
-		return output;
+		while(!paths.get(curr).equals("origin")) {
+			String next = paths.get(curr);
+			for(Flight f : cityMap.get(next).flights) {
+				if(f.dest.equals(curr)) {
+					cost += f.cost;
+					break;
+				}
+			}
+			curr = paths.get(curr);
+		}
+		
+		return Double.toString(cost);
 	}
 	
 	public void path(City c) {

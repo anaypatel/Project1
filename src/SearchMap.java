@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Map;
 
@@ -18,6 +19,10 @@ public class SearchMap {
 		String infile = args[0];
 		String outfile = args[1];
 		
+		String origin = null;
+		
+		FlightGraph flight_graph = null;
+		
 		// Parse the infile using FileReader/BufferedReader
 		String line = null;
 		try {
@@ -25,16 +30,16 @@ public class SearchMap {
             BufferedReader br = new BufferedReader(fr);
             
             // Record the first line as the origin
-            String origin = br.readLine();
+            origin = br.readLine();
             
             // Source, destination, and cost to be recorded on every subsequent line
             String source, dest;
             double cost;
             
             // Create a new graph of flights and put the origin in the cityMap
-            FlightGraph flight_graph = new FlightGraph(origin, outfile);
+            flight_graph = new FlightGraph(origin);
             flight_graph.cityMap.put(origin, new City(origin));
-            
+                        
             // Go through every line of the file
             while((line = br.readLine()) != null) {
             		
@@ -61,15 +66,38 @@ public class SearchMap {
                 
             }
             
+            flight_graph.path(flight_graph.cityMap.get(origin));
+
             // Close the BufferedReader
             br.close();         
         }
         catch(FileNotFoundException ex) {
-            System.out.println("Unable to open file " + infile);                
+            ex.printStackTrace();                
         }
         catch(IOException ex) {
-            System.out.println("Error reading file " + infile);                  
+            ex.printStackTrace();                  
         }	
+		
+		try {
+			FileWriter fw = new FileWriter(outfile);
+			
+			String output = String.format("%5s%25s%20s", "Destination", "Flight Route From " + origin, "Total Cost");
+			output += "\n";
+								
+			for(String k : flight_graph.paths.keySet()) {
+				if(!flight_graph.paths.get(k).equals("origin")) {
+					output += String.format("%5s%25s%20s", k, flight_graph.path_finder(k), flight_graph.path_cost(k));
+					output += "\n";
+				}
+			}
+			
+			fw.write(output);
+			fw.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 	
