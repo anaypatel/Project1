@@ -8,6 +8,7 @@
 	<property name="build.dir" location="bin" />
 	<property name="doc.dir" location="doc" />
 	<property name="dist.dir" location="dist" />
+	<property name="junit.dir" location="junit" />
 	
 	<target name="init" description="setup directories">
 		<mkdir dir="${build.dir}" />
@@ -23,7 +24,7 @@
 	</target>
 
 	<target name="compile" depends="init" description="compile java src">
-		<javac srcdir="${source.dir}/main" destdir="${build.dir}" />
+		<javac includeantruntime="true" srcdir="${source.dir}" destdir="${build.dir}" classpathref="proj.classpath" />
 	</target>
 	
 	<target name="dist" depends="compile" description="bin becomes jar file">
@@ -33,15 +34,49 @@
 	<target name="doc" depends="init" description="create documentation">
 		<javadoc sourcepath="${source.dir}" destdir="${doc.dir}" />
 	</target>
-		
-	<target name="test" depends="compile" description="run junit tests">
-		<junit printsummary="yes" haltonfailure="no" fork="yes">
-			<formatter type="brief" usefile="false" />
-			<test name="test.TestCity" />
-			<test name="test.TestFlight" />
-			<test name="test.TestFlightGraph" />
-			<test name="test.TestSearchMap" />
-		</junit>
-	</target>
-
+	
+	<property environment="env"/>
+	
+    <property name="junit.output.dir" value="junit"/>
+    <path id="lib.classpath">
+        <pathelement location="lib/junit.jar"/>
+        <pathelement location="lib/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+    </path>
+    <path id="proj.classpath">
+        <pathelement location="bin"/>
+        <path refid="lib.classpath"/>
+    </path>
+	
+	  <target name="test">
+        <mkdir dir="${junit.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="tests.CityTest" todir="${junit.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="proj.classpath"/>
+        </junit>
+        
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="tests.FlightTest" todir="${junit.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="proj.classpath"/>
+        </junit>
+        
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="tests.FlightGraphTest" todir="${junit.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="proj.classpath"/>
+        </junit>
+        
+        <junitreport todir="${junit.dir}">
+            <fileset dir="${junit.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.dir}"/>
+        </junitreport>
+        
+    </target>
+	
 </project>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite errors="1" failures="0" hostname="Anays-MacBook-Pro.local" name="tests.FlightGraphTest" skipped="0" tests="1" time="0.0" timestamp="2018-09-18T06:11:00">
+  <properties>
+    <property name="java.vendor" value="Oracle Corporation" />
+    <property name="sun.java.launcher" value="SUN_STANDARD" />
+    <property name="env.XPC_SERVICE_NAME" value="org.eclipse.platform.ide.1684" />
+    <property name="eclipse.pdebuild.templates" value="/Users/anaypatel/eclipse/java-oxygen/Eclipse.app/Contents/Eclipse/../../../../../.p2/pool/plugins/org.eclipse.pde.build_3.9.300.v20170515-0912/templates" />
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers" />
+    <property name="os.name" value="Mac OS X" />
+    <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/classes" />
+    <property name="env.TMPDIR" value="/var/folders/78/gz_f1kxn5yz25x9s905xgck40000gn/T/" />
+    <property name="env.JAVA_STARTED_ON_FIRST_THREAD_50930" value="1" />
+    <property name="java.vm.specification.vendor" value="Oracle Corporation" />
+    <property name="ant.home" value="/Users/anaypatel/.p2/pool/plugins/org.apache.ant_1.10.1.v20170504-0840" />
+    <property name="java.runtime.version" value="1.8.0_152-b16" />
+    <property name="env.Apple_PubSub_Socket_Render" value="/private/tmp/com.apple.launchd.u3TLOZLOdx/Render" />
+    <property name="user.name" value="anaypatel" />
+    <property name="env.USER" value="anaypatel" />
+    <property name="env.SHELL" value="/bin/bash" />
+    <property name="env.__CF_USER_TEXT_ENCODING" value="0x1F5:0x0:0x0" />
+    <property name="build.dir" value="/Users/anaypatel/Documents/GitHub/Project1/bin" />
+    <property name="env.PATH" value="/usr/bin:/bin:/usr/sbin:/sbin" />
+    <property name="user.language" value="en" />
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib" />
+    <property name="ant.project.default-target" value="compile" />
+    <property name="env.JAVA_MAIN_CLASS_50930" value="org.eclipse.ant.internal.launching.remote.InternalAntRunner" />
+    <property name="env.XPC_FLAGS" value="0x0" />
+    <property name="doc.dir" value="/Users/anaypatel/Documents/GitHub/Project1/doc" />
+    <property name="ant.project.name" value="Project1" />
+    <property name="java.version" value="1.8.0_152" />
+    <property name="user.timezone" value="" />
+    <property name="ant.file.Project1" value="/Users/anaypatel/Documents/GitHub/Project1/build.xml" />
+    <property name="sun.arch.data.model" value="64" />
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="java.endorsed.dirs" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/endorsed" />
+    <property name="sun.cpu.isalist" value="" />
+    <property name="sun.jnu.encoding" value="UTF-8" />
+    <property name="file.encoding.pkg" value="sun.io" />
+    <property name="file.separator" value="/" />
+    <property name="java.specification.name" value="Java Platform API Specification" />
+    <property name="java.class.version" value="52.0" />
+    <property name="user.country" value="US" />
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre" />
+    <property name="dist.dir" value="/Users/anaypatel/Documents/GitHub/Project1/dist" />
+    <property name="java.vm.info" value="mixed mode" />
+    <property name="env.LOGNAME" value="anaypatel" />
+    <property name="ant.file" value="/Users/anaypatel/Documents/GitHub/Project1/build.xml" />
+    <property name="os.version" value="10.13.4" />
+    <property name="path.separator" value=":" />
+    <property name="java.vm.version" value="25.152-b16" />
+    <property name="ant.library.dir" value="/Users/anaypatel/.p2/pool/plugins/org.apache.ant_1.10.1.v20170504-0840/lib" />
+    <property name="junit.output.dir" value="junit" />
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob" />
+    <property name="sun.io.unicode.encoding" value="UnicodeBig" />
+    <property name="env.APP_ICON_35447" value="../Resources/Eclipse.icns" />
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit" />
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16" />
+    <property name="env.JAVA_STARTED_ON_FIRST_THREAD_35447" value="1" />
+    <property name="eclipse.pdebuild.scripts" value="/Users/anaypatel/eclipse/java-oxygen/Eclipse.app/Contents/Eclipse/../../../../../.p2/pool/plugins/org.eclipse.pde.build_3.9.300.v20170515-0912/scripts" />
+    <property name="user.home" value="/Users/anaypatel" />
+    <property name="java.specification.vendor" value="Oracle Corporation" />
+    <property name="junit.dir" value="/Users/anaypatel/Documents/GitHub/Project1/junit" />
+    <property name="java.library.path" value="/Users/anaypatel/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:." />
+    <property name="java.vendor.url" value="http://java.oracle.com/" />
+    <property name="java.vm.vendor" value="Oracle Corporation" />
+    <property name="gopherProxySet" value="false" />
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner tests.FlightGraphTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/Users/anaypatel/Documents/GitHub/Project1/junit/TEST-tests.FlightGraphTest.xml crashfile=/Users/anaypatel/Documents/GitHub/Project1/junitvmwatcher7398439318921221858.properties propsfile=/Users/anaypatel/Documents/GitHub/Project1/junit1372544438364888863.properties" />
+    <property name="java.class.path" value="/Users/anaypatel/Documents/GitHub/Project1/lib/junit.jar:/Users/anaypatel/Documents/GitHub/Project1/lib/org.hamcrest.core_1.3.0.v201303031735.jar:/Users/anaypatel/.p2/pool/plugins/org.apache.ant_1.10.1.v20170504-0840/lib/ant-launcher.jar:/Users/anaypatel/.p2/pool/plugins/org.apache.ant_1.10.1.v20170504-0840/lib/ant.jar:/Users/anaypatel/.p2/pool/plugins/org.apache.ant_1.10.1.v20170504-0840/lib/ant-junit.jar:/Users/anaypatel/.p2/pool/plugins/org.apache.ant_1.10.1.v20170504-0840/lib/ant-junit4.jar" />
+    <property name="ant.version" value="Apache Ant(TM) version 1.10.1 compiled on February 2 2017" />
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
+    <property name="java.vm.specification.version" value="1.8" />
+    <property name="sun.os.patch.level" value="unknown" />
+    <property name="sun.cpu.endian" value="little" />
+    <property name="env.HOME" value="/Users/anaypatel" />
+    <property name="env.ANT_HOME" value="/Users/anaypatel/.p2/pool/plugins/org.apache.ant_1.10.1.v20170504-0840" />
+    <property name="eclipse.pdebuild.home" value="/Users/anaypatel/eclipse/java-oxygen/Eclipse.app/Contents/Eclipse/../../../../../.p2/pool/plugins/org.eclipse.pde.build_3.9.300.v20170515-0912/." />
+    <property name="java.io.tmpdir" value="/var/folders/78/gz_f1kxn5yz25x9s905xgck40000gn/T/" />
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
+    <property name="env.SSH_AUTH_SOCK" value="/private/tmp/com.apple.launchd.yYtIGvM1QF/Listeners" />
+    <property name="os.arch" value="x86_64" />
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment" />
+    <property name="java.ext.dirs" value="/Users/anaypatel/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java" />
+    <property name="user.dir" value="/Users/anaypatel/Documents/GitHub/Project1" />
+    <property name="line.separator" value="&#xa;" />
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM" />
+    <property name="basedir" value="/Users/anaypatel/Documents/GitHub/Project1" />
+    <property name="ant.java.version" value="1.8" />
+    <property name="ant.core.lib" value="/Users/anaypatel/.p2/pool/plugins/org.apache.ant_1.10.1.v20170504-0840/lib/ant.jar" />
+    <property name="file.encoding" value="UTF-8" />
+    <property name="source.dir" value="/Users/anaypatel/Documents/GitHub/Project1/src" />
+    <property name="ant.file.type.Project1" value="file" />
+    <property name="java.specification.version" value="1.8" />
+    <property name="ant.project.invoked-targets" value="test" />
+  </properties>
+  <error message="tests.FlightGraphTest" type="java.lang.ClassNotFoundException">java.lang.ClassNotFoundException: tests.FlightGraphTest
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:338)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:264)
+</error>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
