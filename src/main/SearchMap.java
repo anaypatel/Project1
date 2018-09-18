@@ -1,3 +1,5 @@
+package main;
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -6,7 +8,13 @@ import java.io.IOException;
 import java.util.Map;
 
 public class SearchMap {
-
+	
+	/**
+	 * This is the main function, which reads an input file containing possible flights 
+	 * and writes all possible routes to different cities in an output file.
+	 * @param args = the input arguments from the command line (inputfile outputfile)
+	 */
+	
 	public static void main(String[] args) {
 		
 		// Check that the user has entered infile and outfile names
@@ -78,12 +86,16 @@ public class SearchMap {
             ex.printStackTrace();                  
         }	
 		
+		// Write the output file
 		try {
+			// Use FileWriter to write the output file
 			FileWriter fw = new FileWriter(outfile);
 			
+			// Formatted string used to output neat table
 			String output = String.format("%5s%25s%20s", "Destination", "Flight Route From " + origin, "Total Cost");
 			output += "\n";
-								
+			
+			// Loop through and output the flight path, and flight costs for all potential destinations
 			for(String k : flight_graph.paths.keySet()) {
 				if(!flight_graph.paths.get(k).equals("origin")) {
 					output += String.format("%5s%25s%20s", k, flight_graph.path_finder(k), flight_graph.path_cost(k));
@@ -91,6 +103,7 @@ public class SearchMap {
 				}
 			}
 			
+			// Write to the file and close the FW
 			fw.write(output);
 			fw.close();
 			
